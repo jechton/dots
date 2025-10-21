@@ -1,0 +1,6 @@
+gui:
+  scrollPastBottom: false
+  commitHashLength: 0
+git:
+  parseEmoji: true
+  overrideGpg: true

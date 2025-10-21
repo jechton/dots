@@ -1,0 +1,15 @@
+Host *
+	HashKnownHosts yes
+	Compression yes
+	ServerAliveInterval 300
+
+Host bunpi
+	# {{ if eq .device_type "desktop" }}
+    HostName bunpi.local
+	# {{ else }}
+	HostName bunpi
+	# {{ end }}
+
+Host opti
+	HostName opti
+	User driftwood
