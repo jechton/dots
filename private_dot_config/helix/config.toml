@@ -1,0 +1,38 @@
+theme = "catppuccin_mocha"
+
+[editor]
+auto-format = true
+auto-save = true
+bufferline = "multiple"
+color-modes = true
+completion-replace = true
+completion-trigger-len = 1
+cursorline = true
+mouse = true
+line-number = "relative"
+undercurl = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true
+rainbow-option = "dim"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[keys.normal]
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
