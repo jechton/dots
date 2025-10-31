@@ -1,6 +1,9 @@
 # Extra autostart processes
 # exec-once = uwsm-app -- my-service
 exec-once = hyprctl setcursor "Catppuccin Mocha Dark" 24
+{{- if eq .device_type "desktop" }}
+exec-once = hyprpm reload -n
+{{ end -}}
 exec-once = uwsm-app -- signal-desktop --start-in-tray
 exec-once = uwsm-app -- Telegram -startintray
 exec-once = uwsm-app -- slack -u
