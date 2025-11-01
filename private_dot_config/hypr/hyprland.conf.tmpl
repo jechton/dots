@@ -19,7 +19,7 @@ source = ~/.config/hypr/bindings.conf
 source = ~/.config/hypr/envs.conf
 source = ~/.config/hypr/looknfeel.conf
 source = ~/.config/hypr/autostart.conf
-{{- if eq .device_type "desktop" }}
+{{ if eq .device_type "desktop" -}}
 source = ~/.config/hypr/plugins.conf
 {{ end -}}
 # Add any other personal Hyprland configuration below
