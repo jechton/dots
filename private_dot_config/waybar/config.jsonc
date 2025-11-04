@@ -4,9 +4,18 @@
 	"position": "top",
 	"spacing": 5,
 	"height": 26,
-	"modules-left": ["group/workspaces", "mpris"],
-	"modules-center": ["group/windows"],
-	"modules-right": ["group/cpuram", "group/system", "group/tray"],
+	"modules-left": [
+		"group/workspaces",
+		"mpris"
+	],
+	"modules-center": [
+		"group/windows"
+	],
+	"modules-right": [
+		"group/cpuram",
+		"group/system",
+		"group/tray"
+	],
 	"custom/openbracket": {
 		"format": "[",
 		"tooltip": false
@@ -59,11 +68,18 @@
 			"paused": "⏸",
 			"stopped": ""
 		},
-		"dynamic-order": ["title", "artist"]
+		"dynamic-order": [
+			"title",
+			"artist"
+		]
 	},
 	"group/windows": {
 		"orientation": "horizontal",
-		"modules": ["custom/openbracket", "hyprland/window", "custom/closebracket"]
+		"modules": [
+			"custom/openbracket",
+			"hyprland/window",
+			"custom/closebracket"
+		]
 	},
 	"hyprland/window": {
 		"format": "{title}",
@@ -108,7 +124,7 @@
 		]
 	},
 	"clock": {
-		"format": "{:L%A %H:%M}",
+		"format": "{:L%A %I:%M %p}",
 		"format-alt": "{:L%d %B W%V %Y}",
 		"tooltip-format": "{calendar}",
 		"on-click-right": "omarchy-launch-webapp 'https://calendar.google.com'"
@@ -128,7 +144,13 @@
 		"return-type": "json"
 	},
 	"network": {
-		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+		"format-icons": [
+			"󰤯",
+			"󰤟",
+			"󰤢",
+			"󰤥",
+			"󰤨"
+		],
 		"format": "{icon}",
 		"format-wifi": "{icon}",
 		"format-ethernet": "󰀂",
@@ -147,13 +169,18 @@
 		"tooltip-format": "Devices connected: {num_connections}",
 		"on-click": "custom-launch-bluetooth"
 	},
-
 	"battery": {
 		"format": "{icon} {capacity}%",
 		"format-full": "{icon} {capacity}%",
 		"format-charging": "󱐋 {capacity}%",
 		"format-plugged": "  {capacity}%",
-		"format-icons": ["", "", "", "", ""],
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
 		"tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
 		"tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
 		"interval": 5,
@@ -176,7 +203,11 @@
 			"phone": "",
 			"portable": "",
 			"car": "",
-			"default": [" :", " :", " :"]
+			"default": [
+				" :",
+				" :",
+				" :"
+			]
 		}
 	},
 	"tray": {
@@ -194,7 +225,10 @@
 			"children-class": "tray-group-item",
 			"click-to-reveal": true
 		},
-		"modules": ["custom/expand-icon", "tray"]
+		"modules": [
+			"custom/expand-icon",
+			"tray"
+		]
 	},
 	"group/tray": {
 		"orientation": "horizontal",
