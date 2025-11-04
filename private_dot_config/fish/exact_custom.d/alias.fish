@@ -37,5 +37,9 @@ if command -q trash && command -q du
     alias tmdu "du -sh ~/.local/share/Trash/files"
 end
 
+if command -q helix
+    alias hx helix
+end
+
 alias q exit
 alias c clear
