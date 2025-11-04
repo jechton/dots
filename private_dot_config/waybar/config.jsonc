@@ -1,0 +1,214 @@
+{
+	"reload_style_on_change": true,
+	"layer": "top",
+	"position": "top",
+	"spacing": 5,
+	"height": 26,
+	"modules-left": ["group/workspaces", "mpris"],
+	"modules-center": ["group/windows"],
+	"modules-right": ["group/cpuram", "group/system", "group/tray"],
+	"custom/openbracket": {
+		"format": "[",
+		"tooltip": false
+	},
+	"custom/closebracket": {
+		"format": "]",
+		"tooltip": false
+	},
+	"custom/split": {
+		"format": "|",
+		"tooltip": false
+	},
+	"group/workspaces": {
+		"orientation": "horizontal",
+		"modules": [
+			"custom/openbracket",
+			"hyprland/workspaces",
+			"custom/closebracket"
+		]
+	},
+	"hyprland/workspaces": {
+		"on-click": "activate",
+		"format": "{icon}",
+		"format-icons": {
+			"default": "•",
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5",
+			"6": "6",
+			"7": "7",
+			"8": "8",
+			"9": "9"
+		},
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": []
+		}
+	},
+	"mpris": {
+		"format": "[   {status_icon} | {dynamic} ]",
+		"interval": 1,
+		"dynamic-len": 40,
+		"status-icons": {
+			"playing": "▶",
+			"paused": "⏸",
+			"stopped": ""
+		},
+		"dynamic-order": ["title", "artist"]
+	},
+	"group/windows": {
+		"orientation": "horizontal",
+		"modules": ["custom/openbracket", "hyprland/window", "custom/closebracket"]
+	},
+	"hyprland/window": {
+		"format": "{title}",
+		"max-length": 40,
+		"min-length": 0,
+		"all-outputs": true
+	},
+	"group/cpuram": {
+		"orientation": "horizontal",
+		"modules": [
+			"custom/openbracket",
+			"cpu",
+			"custom/split",
+			"memory",
+			"custom/split",
+			"battery",
+			"custom/closebracket"
+		]
+	},
+	"cpu": {
+		"interval": 5,
+		"format": "CPU:{usage}%",
+		"on-click": "xdg-terminal-exec btop"
+	},
+	"memory": {
+		"interval": 5,
+		"format": "RAM:{}%",
+		"on-click": "xdg-terminal-exec btop"
+	},
+	"group/system": {
+		"orientation": "horizontal",
+		"modules": [
+			"custom/openbracket",
+			"clock",
+			"custom/update",
+			"custom/screenrecording-indicator",
+			"custom/split",
+			"network",
+			"bluetooth",
+			"pulseaudio",
+			"custom/closebracket"
+		]
+	},
+	"clock": {
+		"format": "{:L%A %H:%M}",
+		"format-alt": "{:L%d %B W%V %Y}",
+		"tooltip-format": "{calendar}",
+		"on-click-right": "omarchy-launch-webapp 'https://calendar.google.com'"
+	},
+	"custom/update": {
+		"format": "",
+		"exec": "omarchy-update-available",
+		"on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
+		"tooltip-format": "Omarchy update available",
+		"signal": 7,
+		"interval": 21600
+	},
+	"custom/screenrecording-indicator": {
+		"on-click": "omarchy-cmd-screenrecord",
+		"exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+		"signal": 8,
+		"return-type": "json"
+	},
+	"network": {
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+		"format": "{icon}",
+		"format-wifi": "{icon}",
+		"format-ethernet": "󰀂",
+		"format-disconnected": "󰤮",
+		"tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+		"tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+		"tooltip-format-disconnected": "Disconnected",
+		"interval": 3,
+		"spacing": 1,
+		"on-click": "omarchy-launch-wifi"
+	},
+	"bluetooth": {
+		"format": "",
+		"format-disabled": "󰂲",
+		"format-connected": "",
+		"tooltip-format": "Devices connected: {num_connections}",
+		"on-click": "custom-launch-bluetooth"
+	},
+
+	"battery": {
+		"format": "{icon} {capacity}%",
+		"format-full": "{icon} {capacity}%",
+		"format-charging": "󱐋 {capacity}%",
+		"format-plugged": "  {capacity}%",
+		"format-icons": ["", "", "", "", ""],
+		"tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+		"tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+		"interval": 5,
+		"on-click": "omarchy-menu power",
+		"states": {
+			"warning": 20,
+			"critical": 10
+		}
+	},
+	"pulseaudio": {
+		"format": "{icon}{volume}%",
+		"on-click": "xdg-terminal-exec --app-id=com.omarchy.Wiremix -e wiremix",
+		"on-click-right": "pamixer -t",
+		"scroll-step": 5,
+		"format-muted": "󰝟",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [" :", " :", " :"]
+		}
+	},
+	"tray": {
+		"icon-size": 12,
+		"spacing": 5
+	},
+	"custom/expand-icon": {
+		"format": "",
+		"tooltip": false
+	},
+	"group/tray-expander": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 600,
+			"children-class": "tray-group-item",
+			"click-to-reveal": true
+		},
+		"modules": ["custom/expand-icon", "tray"]
+	},
+	"group/tray": {
+		"orientation": "horizontal",
+		"modules": [
+			"custom/openbracket",
+			"group/tray-expander",
+			"custom/closebracket"
+		]
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	}
+}
