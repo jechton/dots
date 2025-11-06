@@ -12,8 +12,8 @@
 		"group/windows"
 	],
 	"modules-right": [
-		"group/cpuram",
 		"group/system",
+		"group/cpuram",
 		"group/tray"
 	],
 	"custom/openbracket": {
