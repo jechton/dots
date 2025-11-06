@@ -83,8 +83,14 @@
 	},
 	"hyprland/window": {
 		"format": "{title}",
-		"max-length": 40,
-		"min-length": 0,
+		// "max-length": 40,
+		// "min-length": 0,
+		"rewrite": {
+			"(.*) — Zen Browser": "$1",
+			"(.*) - fish": "$1",
+			"(.*) - helix": "$1",
+			"(.*) - hx": "$1"
+		},
 		"all-outputs": true
 	},
 	"group/cpuram": {
