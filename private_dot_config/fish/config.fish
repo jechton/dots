@@ -12,6 +12,7 @@ if status is-interactive
     enable_transience
 
     zoxide init fish --cmd cd | source
+    mise activate fish | source
 end
 
 function fish_greeting
