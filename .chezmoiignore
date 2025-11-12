@@ -1,0 +1,3 @@
+{{ if eq .device_type "laptop" }}
+.local/share/omarchy/themes/**/home-*
+{{ end }}
