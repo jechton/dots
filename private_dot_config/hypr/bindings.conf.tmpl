@@ -29,6 +29,24 @@ bindd = SUPER SHIFT ALT, X, Wafrn Post, exec, omarchy-launch-webapp "https://app
 
 bindd = SUPER, code:19, Switch to workspace 10, workspace, 10
 
+unbind = SUPER, mouse_down
+unbind = SUPER, mouse_up
+
+{{ if eq .device_type "desktop" -}}
+bindd = SUPER, mouse_down, Switch to previous workspace, split-cycleworkspaces, prev
+bindd = SUPER, mouse_up, Switch to next workspace, split-cycleworkspaces, next
+
+unbind = SUPER SHIFT, TAB
+unbind = SUPER, TAB
+bindd = SUPER SHIFT, TAB, Switch to previous workspace, split-cycleworkspaces, prev
+bindd = SUPER, TAB, Switch to next workspace, split-cycleworkspaces, next
+{{ else }}
+bindd = SUPER, mouse_down, Switch to previous workspace, workspace, prev
+bindd = SUPER, mouse_up, Switch to next workspace, workspace, next
+bindd = SUPER, BracketLeft, Switch to previous workspace, workspace, prev
+bindd = SUPER, BracketRight, Switch to next workspace, workspace, next
+{{ end -}}
+
 # Overwrite existing bindings, like putting Omarchy Menu on Super + Space
 # unbind = SUPER, SPACE
 # bindd = SUPER, SPACE, Omarchy menu, exec, omarchy-menu
