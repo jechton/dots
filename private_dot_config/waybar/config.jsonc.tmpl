@@ -117,12 +117,12 @@
 	"cpu": {
 		"interval": 5,
 		"format": "CPU:{usage}%",
-		"on-click": "xdg-terminal-exec btop"
+		"on-click": "omarchy-launch-or-focus-tui btop"
 	},
 	"memory": {
 		"interval": 5,
 		"format": "RAM:{}%",
-		"on-click": "xdg-terminal-exec btop"
+		"on-click": "omarchy-launch-or-focus-tui btop"
 	},
 	"group/system": {
 		"orientation": "horizontal",
@@ -176,9 +176,11 @@
 	"bluetooth": {
 		"format": "",
 		"format-disabled": "󰂲",
-		"format-connected": "",
+		"format-off": "󰂲",
+		"format-connected": "󰂱",
+		"format-no-controller": "",
 		"tooltip-format": "Devices connected: {num_connections}",
-		"on-click": "custom-launch-bluetooth"
+		"on-click": "omarchy-launch-bluetooth"
 	},
 	"battery": {
 		"format": "{icon} {capacity}%",
@@ -203,7 +205,7 @@
 	},
 	"pulseaudio": {
 		"format": "{icon}{volume}%",
-		"on-click": "xdg-terminal-exec --app-id=com.omarchy.Wiremix -e wiremix",
+		"on-click": "omarchy-launch-or-focus-tui wiremix",
 		"on-click-right": "pamixer -t",
 		"scroll-step": 5,
 		"format-muted": "󰝟 ",
@@ -226,7 +228,7 @@
 		"spacing": 5
 	},
 	"custom/expand-icon": {
-		"format": "",
+		"format": "",
 		"tooltip": false
 	},
 	"group/tray-expander": {
