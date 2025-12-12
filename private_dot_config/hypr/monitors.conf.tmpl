@@ -3,8 +3,8 @@
 # Format: monitor = [port], resolution, position, scale
 
 {{ if eq .device_type "desktop" -}}
-monitor=HDMI-A-2,1920x1080@60.00,0x672,1.00
-monitor=HDMI-A-1,2560x1440@60.00,1920x0,1.00
+monitor=HDMI-A-2,1920x1080@75.00,0x672,1.00
+monitor=HDMI-A-1,2560x1440@100.00,1920x0,1.00
 monitor=,preferred,auto,auto
 {{- end }}
 {{ if eq .device_type "laptop" -}}
