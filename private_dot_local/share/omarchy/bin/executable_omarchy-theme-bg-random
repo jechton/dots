@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Picks a random background image from the available options.
+
+BACKGROUNDS_DIR="$HOME/.config/omarchy/current/theme/backgrounds/"
+CURRENT_BACKGROUND_LINK="$HOME/.config/omarchy/current/background"
+
+# Use find and mapfile to get all background paths
+# -L: Follow symlinks
+# -type f: Only files
+# -print0: Null-separated output for safe handling of spaces/special characters
+mapfile -d '' -t BACKGROUNDS < <(find -L "$BACKGROUNDS_DIR" -type f -print0)
+TOTAL=${#BACKGROUNDS[@]}
+
+if [[ $TOTAL -eq 0 ]]; then
+  # No wallpapers found
+  notify-send "No background was found for theme" -t 2000
+  pkill -x swaybg
+  # Set a fallback solid black color background
+  setsid uwsm-app -- swaybg --color '#000000' >/dev/null 2>&1 &
+else
+  # 1. Generate a random index between 0 and TOTAL-1
+  RANDOM_INDEX=$((RANDOM % TOTAL))
+
+  # 2. Select the new background using the random index
+  NEW_BACKGROUND="${BACKGROUNDS[$RANDOM_INDEX]}"
+  
+  # Note: The original logic for finding the 'next' background is completely
+  # removed as we are now always choosing a random one.
+
+  # 3. Set new background symlink
+  ln -nsf "$NEW_BACKGROUND" "$CURRENT_BACKGROUND_LINK"
+
+  # 4. Relaunch swaybg
+  pkill -x swaybg
+  setsid uwsm-app -- swaybg -i "$CURRENT_BACKGROUND_LINK" -m fill >/dev/null 2>&1 &
+fi
