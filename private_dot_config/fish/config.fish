@@ -14,6 +14,8 @@ if status is-interactive
     zoxide init fish --cmd cd | source
     mise activate fish | source
     pay-respects fish | source
+else
+    mise activate fish --shims | source
 end
 
 function fish_greeting
