@@ -14,3 +14,6 @@ for cmd in bat batcat
 end
 
 set -gx RIPGREP_CONFIG_PATH "$HOME/.config/ripgrep/ripgreprc"
+set -x -U GOPATH $HOME/go
+
+fish_add_path $GOPATH/bin
