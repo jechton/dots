@@ -1,4 +1,4 @@
-theme = Gruvbox Material Dark
+theme = light:Gruvbox Material Light, dark:Gruvbox Material Dark
 cursor-style = bar
 font-family = JetBrainsMono Nerd Font
 shell-integration-features = ssh-terminfo,ssh-env
