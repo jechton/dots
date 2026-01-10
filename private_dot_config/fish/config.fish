@@ -20,6 +20,3 @@ end
 
 function fish_greeting
 end
-
-set -gx PNPM_HOME ~/.local/share/pnpm
-fish_add_path $PNPM_HOME

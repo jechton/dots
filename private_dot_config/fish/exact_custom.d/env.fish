@@ -16,4 +16,9 @@ end
 set -gx RIPGREP_CONFIG_PATH "$HOME/.config/ripgrep/ripgreprc"
 set -x -U GOPATH $HOME/go
 
+set -gx PNPM_HOME ~/.local/share/pnpm
+fish_add_path $PNPM_HOME
+
 fish_add_path $GOPATH/bin
+
+fish_add_path $HOME/.local/bin
