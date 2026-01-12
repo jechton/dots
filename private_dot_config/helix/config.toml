@@ -11,6 +11,7 @@ cursorline = true
 mouse = true
 line-number = "relative"
 undercurl = true
+true-color = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -36,3 +37,9 @@ C-k = [
   "move_line_up",
   "paste_before",
 ]
+A-x = "extend_to_line_bounds"
+X = "select_line_above"
+
+[keys.select]
+A-x = "extend_to_line_bounds"
+X = "select_line_above"
