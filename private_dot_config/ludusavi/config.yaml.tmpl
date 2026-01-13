@@ -1,0 +1,78 @@
+---
+runtime:
+  threads: ~
+release:
+  check: true
+manifest:
+  enable: true
+language: en-US
+theme: dark
+roots:
+  - store: steam
+    path: {{ .chezmoi.homeDir }}/.local/share/Steam
+  - store: heroic
+    path: {{ .chezmoi.homeDir }}/.config/heroic
+redirects: []
+backup:
+  path: {{ .chezmoi.homeDir }}/Games/Ludusavi
+  ignoredGames: []
+  filter:
+    excludeStoreScreenshots: true
+    cloud:
+      exclude: false
+      epic: false
+      gog: false
+      origin: false
+      steam: false
+      uplay: false
+    ignoredPaths: []
+    ignoredRegistry: []
+  toggledPaths: {}
+  toggledRegistry: {}
+  sort:
+    key: status
+    reversed: false
+  retention:
+    full: 1
+    differential: 0
+  format:
+    chosen: zip
+    zip:
+      compression: zstd
+    compression:
+      deflate:
+        level: 6
+      bzip2:
+        level: 6
+      zstd:
+        level: 10
+  onlyConstructive: false
+restore:
+  path: {{ .chezmoi.homeDir }}/Games/Ludusavi
+  ignoredGames: []
+  toggledPaths: {}
+  toggledRegistry: {}
+  sort:
+    key: status
+    reversed: false
+  reverseRedirects: false
+scan:
+  showDeselectedGames: true
+  showUnchangedGames: true
+  showUnscannedGames: true
+cloud:
+  remote: ~
+  path: ludusavi-backup
+  synchronize: true
+apps:
+  rclone:
+    path: ""
+    arguments: "--fast-list --ignore-checksum"
+customGames:
+  - name: Disco Elysium - The Final Cut
+    integration: override
+    alias: Disco Elysium
+    files: []
+    registry: []
+    installDir: []
+    winePrefix: []
