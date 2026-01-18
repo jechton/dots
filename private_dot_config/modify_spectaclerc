@@ -3,3 +3,4 @@
 source auto
 
 ignore "ImageSave" "lastImageSaveLocation"
+ignore section "Annotations"
