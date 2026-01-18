@@ -1,0 +1,5 @@
+[".local/bin/cht.sh"]
+    type = "file"
+    url = "https://cht.sh/:cht.sh"
+    refreshPeriod = "300h"
+    executable = true
