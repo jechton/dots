@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/schemas/settings.schema.json",
+  "context": {
+    "fileName": "AGENTS.md"
+  },
+  "general": {
+    "enableAutoUpdate": false,
+    "enablePromptCompletion": true,
+    "previewFeatures": true
+  },
+  "ide": {
+    "enabled": true,
+    "hasSeenNudge": true
+  },
+  "model": {
+    "name": "gemini-3-flash-preview"
+  },
+  "privacy": {
+    "usageStatisticsEnabled": false
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    },
+    "environmentVariableRedaction": {
+      "enabled": true
+    }
+  },
+  "telemetry": {
+    "enabled": false
+  },
+  "tools": {
+    "shell": {
+      "showColor": true
+    }
+  },
+  "ui": {
+    "accessibility": {
+      "enableLoadingPhrases": false
+    },
+    "footer": {
+      "hideSandboxStatus": true
+    },
+    "hideBanner": true,
+    "hideTips": true,
+    "showCitations": true,
+    "useAlternateBuffer": true
+  }
+}
