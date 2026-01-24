@@ -8,4 +8,6 @@ abbr lg lazygit
 abbr gp 'git push'
 abbr gpf 'git push --force-with-lease'
 abbr gpf! 'git push --force'
-abbr gpl 'git pull'
+abbr gu 'git pull'
+abbr gs 'git switch'
+abbr gst 'git status -s'
