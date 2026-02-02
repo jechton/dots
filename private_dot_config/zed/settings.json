@@ -1,0 +1,132 @@
+{
+	"auto_indent_on_paste": true,
+	"auto_install_extensions": {
+		"astro": true,
+		"biome": true,
+		"dockerfile": true,
+		"emmet": true,
+		"git-firefly": true,
+		"html": true
+	},
+	"base_keymap": "VSCode",
+	"bottom_dock_layout": "full",
+	"buffer_font_family": "JetBrainsMono Nerd Font",
+	"calls": {
+		"mute_on_join": true
+	},
+	"collaboration_panel": {
+		"button": false
+	},
+	"colorize_brackets": true,
+	"current_line_highlight": "gutter",
+	"cursor_blink": true,
+	"file_types": {
+		"fish": ["*.fish.tmpl"],
+		"Git Attributes": ["**/{git,.git,.git/info}/attributes"],
+		"Git Config": [
+			"*.gitconfig",
+			"**/{git,.git/modules,.git/modules/*}/config"
+		],
+		"Git Ignore": ["**/{git,.git}/ignore", "**/.git/info/exclude"],
+		"renpy": ["*.rpy"],
+		"shellscript": ["*.sh.tmpl"]
+	},
+	"git": {
+		"inline_blame": {
+			"enabled": false
+		}
+	},
+	"git_panel": {
+		"dock": "right"
+	},
+	"helix_mode": false,
+	"indent_guides": {
+		"background_coloring": "disabled",
+		"coloring": "indent_aware"
+	},
+	"languages": {
+		"JavaScript": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"TypeScript": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"TSX": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"Astro": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"JSON": { "formatter": { "language_server": { "name": "biome" } } },
+		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
+		"CSS": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true
+			}
+		},
+		"GraphQL": { "formatter": { "language_server": { "name": "biome" } } }
+	},
+	"linked_edits": true,
+	"outline_panel": {
+		"dock": "right"
+	},
+	"project_panel": {
+		"dock": "right",
+		"entry_spacing": "standard",
+		"folder_icons": true,
+		"hide_root": true
+	},
+	"scroll_beyond_last_line": "vertical_scroll_margin",
+	"soft_wrap": "editor_width",
+	"status_bar": {
+		"cursor_position_button": false
+	},
+	"sticky_scroll": {
+		"enabled": true
+	},
+	"tab_bar": {
+		"show_nav_history_buttons": false
+	},
+	"tabs": {
+		"file_icons": true,
+		"show_diagnostics": "all"
+	},
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false
+	},
+	"terminal": {
+		"blinking": "on",
+		"cursor_shape": "bar"
+	},
+	"theme": {
+		"dark": "Gruvbox Dark",
+		"light": "Gruvbox Light",
+		"mode": "system"
+	},
+	"title_bar": {
+		"show_user_picture": false
+	},
+	"use_on_type_format": true,
+	"use_smartcase_search": true,
+	"which_key": {
+		"enabled": true
+	}
+}
