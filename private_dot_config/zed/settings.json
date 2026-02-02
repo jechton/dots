@@ -6,7 +6,8 @@
 		"dockerfile": true,
 		"emmet": true,
 		"git-firefly": true,
-		"html": true
+		"html": true,
+		"LOG": true
 	},
 	"base_keymap": "VSCode",
 	"bottom_dock_layout": "full",
@@ -84,6 +85,7 @@
 		"GraphQL": { "formatter": { "language_server": { "name": "biome" } } }
 	},
 	"linked_edits": true,
+	"lsp_highlight_debounce": 100,
 	"outline_panel": {
 		"dock": "right"
 	},
@@ -94,6 +96,7 @@
 		"hide_root": true
 	},
 	"scroll_beyond_last_line": "vertical_scroll_margin",
+	"show_whitespaces": "selection",
 	"soft_wrap": "editor_width",
 	"status_bar": {
 		"cursor_position_button": false
@@ -104,6 +107,7 @@
 	"tab_bar": {
 		"show_nav_history_buttons": false
 	},
+	"tab_size": 2,
 	"tabs": {
 		"file_icons": true,
 		"show_diagnostics": "all"
@@ -114,7 +118,16 @@
 	},
 	"terminal": {
 		"blinking": "on",
-		"cursor_shape": "bar"
+		"cursor_shape": "bar",
+		"env": {
+			"GIT_EDITOR": "zed --wait"
+		},
+		"detect_venv": {
+			"on": {
+				"directories": [".env", "env", ".venv", "venv"],
+				"activate_script": "default"
+			}
+		}
 	},
 	"theme": {
 		"dark": "Gruvbox Dark",
