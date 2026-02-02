@@ -48,6 +48,7 @@
 	"languages": {
 		"JavaScript": {
 			"formatter": { "language_server": { "name": "biome" } },
+			"language_servers": ["biome"],
 			"code_actions_on_format": {
 				"source.fixAll.biome": true,
 				"source.organizeImports.biome": true
@@ -55,12 +56,14 @@
 		},
 		"TypeScript": {
 			"formatter": { "language_server": { "name": "biome" } },
+			"language_servers": ["biome"],
 			"code_actions_on_format": {
 				"source.fixAll.biome": true,
 				"source.organizeImports.biome": true
 			}
 		},
 		"TSX": {
+			"language_servers": ["biome"],
 			"formatter": { "language_server": { "name": "biome" } },
 			"code_actions_on_format": {
 				"source.fixAll.biome": true,
