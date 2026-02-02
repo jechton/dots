@@ -39,7 +39,8 @@
 		}
 	},
 	"git_panel": {
-		"dock": "right"
+		"button": false,
+  "dock": "right"
 	},
 	"helix_mode": false,
 	"indent_guides": {

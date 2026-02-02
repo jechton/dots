@@ -21,6 +21,7 @@
   {
     "bindings": {
       "ctrl-alt-g": ["agent::NewExternalAgentThread", { "agent": "gemini" }],
+      "ctrl-shift-g": ["task::Spawn", {"task_name": "LazyGit"}]
     },
   },
 ]
