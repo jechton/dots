@@ -40,7 +40,7 @@
 	},
 	"git_panel": {
 		"button": false,
-  "dock": "right"
+		"dock": "right"
 	},
 	"helix_mode": false,
 	"indent_guides": {
@@ -50,7 +50,7 @@
 	"languages": {
 		"JavaScript": {
 			"formatter": { "language_server": { "name": "biome" } },
-			"language_servers": ["biome"],
+			// "language_servers": ["biome"],
 			"code_actions_on_format": {
 				"source.fixAll.biome": true,
 				"source.organizeImports.biome": true
@@ -58,14 +58,14 @@
 		},
 		"TypeScript": {
 			"formatter": { "language_server": { "name": "biome" } },
-			"language_servers": ["biome"],
+			// "language_servers": ["biome"],
 			"code_actions_on_format": {
 				"source.fixAll.biome": true,
 				"source.organizeImports.biome": true
 			}
 		},
 		"TSX": {
-			"language_servers": ["biome"],
+			// "language_servers": ["biome"],
 			"formatter": { "language_server": { "name": "biome" } },
 			"code_actions_on_format": {
 				"source.fixAll.biome": true,
@@ -73,11 +73,11 @@
 			}
 		},
 		"Astro": {
-			"formatter": { "language_server": { "name": "biome" } },
-			"code_actions_on_format": {
-				"source.fixAll.biome": true,
-				"source.organizeImports.biome": true
-			}
+			"formatter": { "language_server": { "name": "biome" } }
+			// 	"code_actions_on_format": {
+			// 		"source.fixAll.biome": true,
+			// 		"source.organizeImports.biome": true
+			// }
 		},
 		"JSON": { "formatter": { "language_server": { "name": "biome" } } },
 		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
