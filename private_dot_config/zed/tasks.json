@@ -1,0 +1,9 @@
+[
+	{
+		"label": "LazyGit",
+		"command": "lazygit",
+		"use_new_terminal": true,
+		"reveal_target": "center",
+		"hide": "on_success"
+	}
+]
