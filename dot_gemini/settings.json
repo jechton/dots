@@ -6,7 +6,12 @@
   "general": {
     "enableAutoUpdate": false,
     "enablePromptCompletion": true,
-    "previewFeatures": true
+    "previewFeatures": true,
+    "sessionRetention": {
+      "warningAcknowledged": true,
+      "enabled": true,
+      "maxAge": "30d"
+    }
   },
   "ide": {
     "enabled": true,
@@ -44,6 +49,7 @@
     "hideBanner": true,
     "hideTips": true,
     "showCitations": true,
-    "useAlternateBuffer": true
+    "useAlternateBuffer": true,
+    "loadingPhrases": "off"
   }
 }
