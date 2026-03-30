@@ -1,14 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/schemas/settings.schema.json",
   "context": {
-    "fileName": ["AGENTS.md", "GEMINI.md"]
+    "fileName": [
+      "AGENTS.md",
+      "GEMINI.md"
+    ]
   },
   "general": {
     "enableAutoUpdate": false,
-    "enablePromptCompletion": true,
-    "previewFeatures": true,
     "sessionRetention": {
-      "warningAcknowledged": true,
       "enabled": true,
       "maxAge": "30d"
     }
