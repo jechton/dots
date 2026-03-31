@@ -1,7 +1,4 @@
-alias ls "eza --sort=type"
-alias l "eza -l --git --sort=type"
-alias ll "eza -lag --git --sort=type --total-size --smart-group --octal-permissions"
-alias tree "eza --tree -L 2 --group-directories-first"
+alias ls "eza --color=always --group-directories-first --icons"
 
 if command -q batcat
     alias bat batcat
