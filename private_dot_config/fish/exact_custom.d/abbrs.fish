@@ -11,3 +11,5 @@ abbr gpf! 'git push --force'
 abbr gu 'git pull'
 abbr gs 'git switch'
 abbr gst 'git status -s'
+
+abbr v nvim
